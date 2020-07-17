@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+@amusement_park = AmusementPark.create!(name: "Elich Gardens", admission_price: 45)
+@tower_of_doom = @amusement_park.rides.create!(name: "Tower of Doom", thrill_rating: 8)
+@brain_drain = @amusement_park.rides.create!(name: "Brain Drain", thrill_rating: 6)
+@teacups = @amusement_park.rides.create!(name: "Tea Cups", thrill_rating: 2)
 
 @mechanic_1 = Mechanic.create!(name: "Monroe M.", years_of_experience: 12)
 @mechanic_2 = Mechanic.create!(name: "Lady L.", years_of_experience: 18)

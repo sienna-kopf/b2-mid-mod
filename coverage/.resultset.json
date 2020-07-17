@@ -209,6 +209,8 @@
           null,
           1,
           1,
+          1,
+          null,
           null
         ]
       },
@@ -254,29 +256,35 @@
           null
         ]
       },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/spec/models/amusement_parks_spec.rb": {
+      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/spec/features/mechanics/show_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          2,
-          null,
-          null,
           1,
           1,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
+          1,
           1,
           1,
           null,
+          1,
+          1,
+          1,
           null,
           1,
           1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
           1,
           null,
           null,
@@ -289,11 +297,11 @@
           1,
           null,
           1,
-          2,
+          1,
           null,
           null,
           1,
-          2,
+          1,
           null,
           null
         ]
@@ -302,59 +310,6 @@
         "lines": [
           1,
           1,
-          null
-        ]
-      },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/spec/models/mechanic_rides_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/models/mechanic_ride.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/spec/models/mechanics_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/models/mechanic.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/spec/models/rides_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          2,
-          null,
           null
         ]
       },
@@ -383,16 +338,40 @@
           null
         ]
       },
+      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/models/mechanic.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/controllers/mechanics_controller.rb": {
         "lines": [
           1,
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/models/mechanic_ride.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null
         ]
       }
     },
-    "timestamp": 1595003618
+    "timestamp": 1595004680
   }
 }

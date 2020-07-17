@@ -1,0 +1,15 @@
+<h1><%= @mechanic.name %></h1>
+<p><%= @mechanic.years_of_experience %> years of experience</p>
+
+<section class="mechanic_rides">
+  <h3>Mechanics Current Rides:</h3>
+  <ul>
+    <% @mechanic.rides.each do |ride| %>
+    <li><%= ride.name %></li>
+    <% end %>
+  </ul>
+</section>
+
+<footer>
+  <h5><%= link_to "Add Ride", "/mechanics/#{@mechanic.id}/new" %></h5>
+</footer>
