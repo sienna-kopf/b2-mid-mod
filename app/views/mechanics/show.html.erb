@@ -10,6 +10,12 @@
   </ul>
 </section>
 
+<% if flash[:errors] %>
+  <% flash.each do |key, message| %>
+    <%= message %>
+  <% end %>
+<% end %>
+
 <section class="add_ride_form">
   <h3>Add Ride</h3>
   <%= form_tag "/mechanic_rides?mechanic_id=#{@mechanic.id}" do %>

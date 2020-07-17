@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "show page" do
   describe "for a mechanic" do
-    it "can display name, years of experience, and rides" do
+    before :each do
       @amusement_park = AmusementPark.create!(name: "Elich Gardens", admission_price: 45)
       @tower_of_doom = @amusement_park.rides.create!(name: "Tower of Doom", thrill_rating: 8)
       @brain_drain = @amusement_park.rides.create!(name: "Brain Drain", thrill_rating: 6)
@@ -14,7 +14,9 @@ RSpec.describe "show page" do
 
       @mechanic_2.add_ride(@brain_drain)
       @mechanic_2.add_ride(@teacups)
+    end
 
+    it "can display name, years of experience, and rides" do
       visit "/mechanics/#{@mechanic_2.id}"
 
       expect(page).to have_content("Lady L.")
@@ -24,6 +26,10 @@ RSpec.describe "show page" do
         expect(page).to have_content("Brain Drain")
         expect(page).to have_content("Tea Cups")
       end
+    end
+
+    it "can add a ride to the mechanics current rides" do
+      visit "/mechanics/#{@mechanic_2.id}"
 
       within(".add_ride_form") do
         expect(page).to have_content("Add Ride")
@@ -38,6 +44,18 @@ RSpec.describe "show page" do
         expect(page).to have_content("Tea Cups")
         expect(page).to have_content("Tower of Doom")
       end
+    end
+
+    it "can handle incomplete form sad path" do
+      visit "/mechanics/#{@mechanic_2.id}"
+
+      within(".add_ride_form") do
+        expect(page).to have_content("Add Ride")
+        fill_in :ride_id, with: ""
+        click_on "Submit"
+      end
+
+      expect(page).to have_content("Must enter valid ride id!!")
     end
   end
 end

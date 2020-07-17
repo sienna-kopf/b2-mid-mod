@@ -14,7 +14,7 @@
       <img src="./assets/0.11.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-07-17T11:30:12-06:00">2020-07-17T11:30:12-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-07-17T11:38:44-06:00">2020-07-17T11:38:44-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.03
+         1.22
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>126</b> relevant lines,
-    <span class="green"><b>126</b> lines covered</span> and
+    <b>139</b> relevant lines,
+    <span class="green"><b>139</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -94,11 +94,11 @@
         <tr class="t-file">
           <td class="strong t-file__name"><a href="#9c576b171acb3b84efaddd9bda3a07bc378ca153" class="src_link" title="app/controllers/mechanic_rides_controller.rb">app/controllers/mechanic_rides_controller.rb</a></td>
           <td class="green strong t-file__coverage">100.0 %</td>
-          <td>8</td>
-          <td>6</td>
-          <td>6</td>
+          <td>13</td>
+          <td>9</td>
+          <td>9</td>
           <td>0</td>
-          <td>1.0</td>
+          <td>1.22</td>
           
         </tr>
       
@@ -109,7 +109,7 @@
           <td>5</td>
           <td>5</td>
           <td>0</td>
-          <td>1.2</td>
+          <td>1.8</td>
           
         </tr>
       
@@ -153,7 +153,7 @@
           <td>5</td>
           <td>5</td>
           <td>0</td>
-          <td>1.4</td>
+          <td>2.2</td>
           
         </tr>
       
@@ -336,11 +336,11 @@
         <tr class="t-file">
           <td class="strong t-file__name"><a href="#ab515d38176ff4aef719cc08c03360eda1d0d3e4" class="src_link" title="spec/features/mechanics/show_spec.rb">spec/features/mechanics/show_spec.rb</a></td>
           <td class="green strong t-file__coverage">100.0 %</td>
-          <td>43</td>
-          <td>28</td>
-          <td>28</td>
+          <td>61</td>
+          <td>38</td>
+          <td>38</td>
           <td>0</td>
-          <td>1.0</td>
+          <td>1.47</td>
           
         </tr>
       
@@ -524,8 +524,8 @@
     
 
     <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -559,8 +559,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="3">
+            <span class="hits">2</span>
             
 
             
@@ -570,13 +570,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="4">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    ride = Ride.find(params[:ride_id])</code>
+            <code class="ruby">    if params[:ride_id].empty?</code>
           </li>
         </div>
       
@@ -587,7 +587,7 @@
 
             
 
-            <code class="ruby">    mechanic.add_ride(ride)</code>
+            <code class="ruby">      flash[:errors] = &quot;Must enter valid ride id!!&quot;</code>
           </li>
         </div>
       
@@ -598,7 +598,7 @@
 
             
 
-            <code class="ruby">    redirect_to &quot;/mechanics/#{params[:mechanic_id]}&quot;</code>
+            <code class="ruby">      redirect_to &quot;/mechanics/#{params[:mechanic_id]}&quot;</code>
           </li>
         </div>
       
@@ -609,12 +609,67 @@
 
             
 
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      ride = Ride.find(params[:ride_id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      mechanic.add_ride(ride)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      redirect_to &quot;/mechanics/#{params[:mechanic_id]}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -722,8 +777,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="7">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="5" data-linenumber="7">
+            <span class="hits">5</span>
             
 
             
@@ -1110,8 +1165,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="6">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="7" data-linenumber="6">
+            <span class="hits">7</span>
             
 
             
@@ -3890,8 +3945,8 @@
     
 
     <div class="t-line-summary">
-      <b>28</b> relevant lines.
-      <span class="green"><b>28</b> lines covered</span> and
+      <b>38</b> relevant lines.
+      <span class="green"><b>38</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3953,13 +4008,13 @@
 
             
 
-            <code class="ruby">    it &quot;can display name, years of experience, and rides&quot; do</code>
+            <code class="ruby">    before :each do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="6">
+            <span class="hits">3</span>
             
 
             
@@ -3969,8 +4024,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="7">
+            <span class="hits">3</span>
             
 
             
@@ -3980,8 +4035,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="8">
+            <span class="hits">3</span>
             
 
             
@@ -3991,8 +4046,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="9">
+            <span class="hits">3</span>
             
 
             
@@ -4013,8 +4068,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="11">
+            <span class="hits">3</span>
             
 
             
@@ -4024,8 +4079,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="12">
+            <span class="hits">3</span>
             
 
             
@@ -4035,8 +4090,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="13">
+            <span class="hits">3</span>
             
 
             
@@ -4057,8 +4112,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="15">
+            <span class="hits">3</span>
             
 
             
@@ -4068,8 +4123,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="16">
+            <span class="hits">3</span>
             
 
             
@@ -4085,29 +4140,29 @@
 
             
 
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
+          <li class="covered" data-hits="1" data-linenumber="19">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      visit &quot;/mechanics/#{@mechanic_2.id}&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby"></code>
+            <code class="ruby">    it &quot;can display name, years of experience, and rides&quot; do</code>
           </li>
         </div>
       
@@ -4118,29 +4173,29 @@
 
             
 
-            <code class="ruby">      expect(page).to have_content(&quot;Lady L.&quot;)</code>
+            <code class="ruby">      visit &quot;/mechanics/#{@mechanic_2.id}&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(page).to have_content(&quot;18 years of experience&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(&quot;Lady L.&quot;)</code>
           </li>
         </div>
       
@@ -4151,45 +4206,12 @@
 
             
 
-            <code class="ruby">      within(&quot;.mechanic_rides&quot;) do</code>
+            <code class="ruby">      expect(page).to have_content(&quot;18 years of experience&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_content(&quot;Brain Drain&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="25">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_content(&quot;Tea Cups&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -4200,35 +4222,68 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
+          <li class="covered" data-hits="1" data-linenumber="25">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      within(&quot;.add_ride_form&quot;) do</code>
+            <code class="ruby">      within(&quot;.mechanic_rides&quot;) do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
+          <li class="covered" data-hits="1" data-linenumber="26">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;Add Ride&quot;)</code>
+            <code class="ruby">        expect(page).to have_content(&quot;Brain Drain&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
+          <li class="covered" data-hits="1" data-linenumber="27">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        fill_in :ride_id, with: &quot;#{@tower_of_doom.id}&quot;</code>
+            <code class="ruby">        expect(page).to have_content(&quot;Tea Cups&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4239,18 +4294,18 @@
 
             
 
-            <code class="ruby">        click_on &quot;Submit&quot;</code>
+            <code class="ruby">    it &quot;can add a ride to the mechanics current rides&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="32">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">      end</code>
+            
+
+            <code class="ruby">      visit &quot;/mechanics/#{@mechanic_2.id}&quot;</code>
           </li>
         </div>
       
@@ -4272,18 +4327,18 @@
 
             
 
-            <code class="ruby">      expect(current_path).to eq(&quot;/mechanics/#{@mechanic_2.id}&quot;)</code>
+            <code class="ruby">      within(&quot;.add_ride_form&quot;) do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="35">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Add Ride&quot;)</code>
           </li>
         </div>
       
@@ -4294,7 +4349,7 @@
 
             
 
-            <code class="ruby">      within(&quot;.mechanic_rides&quot;) do</code>
+            <code class="ruby">        fill_in :ride_id, with: &quot;#{@tower_of_doom.id}&quot;</code>
           </li>
         </div>
       
@@ -4305,34 +4360,12 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(&quot;Brain Drain&quot;)</code>
+            <code class="ruby">        click_on &quot;Submit&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="38">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_content(&quot;Tea Cups&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_content(&quot;Tower of Doom&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="never" data-hits="" data-linenumber="38">
             
             
 
@@ -4343,7 +4376,95 @@
         </div>
       
         <div>
+          <li class="never" data-hits="" data-linenumber="39">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(current_path).to eq(&quot;/mechanics/#{@mechanic_2.id}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="never" data-hits="" data-linenumber="41">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="42">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      within(&quot;.mechanic_rides&quot;) do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="43">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Brain Drain&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="44">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Tea Cups&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="45">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Tower of Doom&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
@@ -4354,7 +4475,139 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
+          <li class="never" data-hits="" data-linenumber="48">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="49">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &quot;can handle incomplete form sad path&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="50">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      visit &quot;/mechanics/#{@mechanic_2.id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="51">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="52">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      within(&quot;.add_ride_form&quot;) do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="53">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Add Ride&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="54">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        fill_in :ride_id, with: &quot;&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="55">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        click_on &quot;Submit&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="56">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="57">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="58">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_content(&quot;Must enter valid ride id!!&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="59">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="60">
             
             
 
@@ -4365,7 +4618,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
