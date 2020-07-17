@@ -2,7 +2,10 @@ class AmusementPark < ApplicationRecord
   has_many :rides
 
   def alphabetical_rides
-    list = rides.order(:name)
-    binding.pry
+    rides.order(:name)
+  end
+
+  def average_thrill
+    rides.average(:thrill_rating)
   end
 end

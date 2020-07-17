@@ -18,7 +18,8 @@ RSpec.describe AmusementPark do
     end
 
     it "#average_thrill" do
-      expect(@amusement_park.average_thrill.round(1)).to eq(5.3)
+      average_thrill = (@amusement_park.average_thrill.round(1)).to_s
+      expect(average_thrill).to eq("5.3")
     end
   end
 end
