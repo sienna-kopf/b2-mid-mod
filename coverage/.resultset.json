@@ -256,12 +256,14 @@
           1,
           1,
           2,
+          2,
           null,
           null
         ]
       },
       "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/models/mechanic.rb": {
         "lines": [
+          1,
           1,
           1,
           null
@@ -286,6 +288,6 @@
         ]
       }
     },
-    "timestamp": 1594999808
+    "timestamp": 1594999912
   }
 }
