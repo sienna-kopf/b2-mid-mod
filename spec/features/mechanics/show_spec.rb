@@ -57,5 +57,23 @@ RSpec.describe "show page" do
 
       expect(page).to have_content("Must enter valid ride id!!")
     end
+
+    it 'will not allow for adding ride duplicates to a mechanics list' do
+      visit "/mechanics/#{@mechanic_2.id}"
+
+      within(".add_ride_form") do
+        expect(page).to have_content("Add Ride")
+        fill_in :ride_id, with: "#{@tower_of_doom.id}"
+        click_on "Submit"
+      end
+
+      within(".add_ride_form") do
+        expect(page).to have_content("Add Ride")
+        fill_in :ride_id, with: "#{@tower_of_doom.id}"
+        click_on "Submit"
+      end
+
+      expect(page).to have_content("That ride has already been added! No duplicates!")
+    end
   end
 end
