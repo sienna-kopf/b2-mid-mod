@@ -1,2 +1,3 @@
 class Ride < ApplicationRecord
-end 
+  belongs_to :amusement_park
+end

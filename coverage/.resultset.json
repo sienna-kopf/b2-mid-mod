@@ -229,13 +229,25 @@
           null
         ]
       },
+      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/spec/models/rides_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/models/ride.rb": {
         "lines": [
+          1,
           1,
           null
         ]
       }
     },
-    "timestamp": 1594999041
+    "timestamp": 1594999139
   }
 }
