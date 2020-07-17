@@ -206,6 +206,8 @@
         "lines": [
           1,
           null,
+          null,
+          1,
           null
         ]
       },
@@ -215,8 +217,9 @@
           null
         ]
       },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/models/amusement_park.rb": {
+      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/models/mechanic.rb": {
         "lines": [
+          1,
           1,
           1,
           null
@@ -229,69 +232,23 @@
           null
         ]
       },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/spec/models/mechanic_rides_spec.rb": {
+      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/controllers/mechanics_controller.rb": {
         "lines": [
           1,
-          null,
           1,
           1,
-          2,
-          2,
           null,
           null
         ]
       },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/models/mechanic_ride.rb": {
+      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/controllers/application_controller.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/spec/models/mechanics_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/models/mechanic.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/spec/models/rides_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/cece/turing/2mod/independent_challenge/b2-mid-mod/app/models/ride.rb": {
-        "lines": [
-          1,
-          1,
           1,
           1,
           null
         ]
       }
     },
-    "timestamp": 1595000020
+    "timestamp": 1595000895
   }
 }

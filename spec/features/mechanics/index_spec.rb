@@ -13,20 +13,20 @@ RSpec.describe "index page" do
         expect(page).to have_content("All Mechanics")
       end
 
-      within(".mechanic-#{@mechanic_1}") do
+      within(".mechanic-#{@mechanic_1.id}") do
         expect(page).to have_content("Monroe M.")
         expect(page).to have_content("12 years of experience")
       end
 
-      within(".mechanic-#{@mechanic_2}") do
+      within(".mechanic-#{@mechanic_2.id}") do
         expect(page).to have_content("Lady L.")
         expect(page).to have_content("18 years of experience")
       end
 
-      within(".mechanic-#{@mechanic_3}") do
+      within(".mechanic-#{@mechanic_3.id}") do
         expect(page).to have_content("Cara J.")
         expect(page).to have_content("9 years of experience")
-      end 
+      end
     end
   end
 end
