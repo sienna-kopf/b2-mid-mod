@@ -10,6 +10,11 @@
   </ul>
 </section>
 
-<footer>
-  <h5><%= link_to "Add Ride", "/mechanics/#{@mechanic.id}/new" %></h5>
-</footer>
+<section class="add_ride_form">
+  <h3>Add Ride</h3>
+  <%= form_tag "/mechanic_rides?mechanic_id=#{@mechanic.id}" do %>
+    <%= label_tag :ride_id %>
+    <%= number_field_tag :ride_id %><br>
+    <%= submit_tag "Submit" %>
+  <% end %>
+</section>
