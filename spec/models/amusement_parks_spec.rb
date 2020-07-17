@@ -14,7 +14,7 @@ RSpec.describe AmusementPark do
     end
 
     it '#alphabetical_rides' do
-      expect(@amusement_park.alphabetical_rides).to eq(["Brain Drain", "Tea Cups", "Tower of Doom"])
+      expect(@amusement_park.alphabetical_rides).to eq([@brain_drain, @teacups, @tower_of_doom])
     end
 
     it "#average_thrill" do
