@@ -14,7 +14,7 @@
       <img src="./assets/0.11.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-07-17T10:51:20-06:00">2020-07-17T10:51:20-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-07-17T10:57:35-06:00">2020-07-17T10:57:35-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  100.0%
+  93.28%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         1.02
+       <span class="red">
+         0.95
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>111</b> relevant lines,
+    <b>119</b> relevant lines,
     <span class="green"><b>111</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed. </span>
+    <span class="red"><b>8</b> lines missed. </span>
     (<span class="green">
-  100.0%
+  93.28%
 </span>
 )
   </div>
@@ -324,12 +324,12 @@
       
         <tr class="t-file">
           <td class="strong t-file__name"><a href="#ab515d38176ff4aef719cc08c03360eda1d0d3e4" class="src_link" title="spec/features/mechanics/show_spec.rb">spec/features/mechanics/show_spec.rb</a></td>
-          <td class="green strong t-file__coverage">100.0 %</td>
-          <td>31</td>
+          <td class="red strong t-file__coverage">71.43 %</td>
+          <td>43</td>
+          <td>28</td>
           <td>20</td>
-          <td>20</td>
-          <td>0</td>
-          <td>1.0</td>
+          <td>8</td>
+          <td>0.71</td>
           
         </tr>
       
@@ -3739,8 +3739,8 @@
   <div class="header">
     <h3>spec/features/mechanics/show_spec.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="red">
+  71.43%
 </span>
 
       lines covered
@@ -3749,9 +3749,9 @@
     
 
     <div class="t-line-summary">
-      <b>20</b> relevant lines.
+      <b>28</b> relevant lines.
       <span class="green"><b>20</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="red"><b>8</b> lines missed.</span>
     </div>
 
     
@@ -4065,12 +4065,144 @@
 
             
 
-            <code class="ruby">      expect(page).to have_link(&quot;Add Ride&quot;)</code>
+            <code class="ruby">      within(&quot;.add_ride_form&quot;) do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="missed" data-hits="0" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Add Ride&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">        fill_in :ride_id, with: &quot;#{@tower_of_doom.id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">        click_on &quot;Submit&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">      expect(current_path).to eq(&quot;/mechanics/#{@mechanic_2.id}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby">      within(&quot;.mechanic_rides&quot;) do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="37">
+            
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Brain Drain&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="38">
+            
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Tea Cups&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="39">
+            
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(&quot;Tower of Doom&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
@@ -4081,7 +4213,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="30">
+          <li class="never" data-hits="" data-linenumber="42">
             
             
 
@@ -4092,7 +4224,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 

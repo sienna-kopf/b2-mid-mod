@@ -25,7 +25,19 @@ RSpec.describe "show page" do
         expect(page).to have_content("Tea Cups")
       end
 
-      expect(page).to have_link("Add Ride")
+      within(".add_ride_form") do
+        expect(page).to have_content("Add Ride")
+        fill_in :ride_id, with: "#{@tower_of_doom.id}"
+        click_on "Submit"
+      end
+
+      expect(current_path).to eq("/mechanics/#{@mechanic_2.id}")
+
+      within(".mechanic_rides") do
+        expect(page).to have_content("Brain Drain")
+        expect(page).to have_content("Tea Cups")
+        expect(page).to have_content("Tower of Doom")
+      end
     end
   end
 end
