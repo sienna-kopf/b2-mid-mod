@@ -14,9 +14,9 @@ RSpec.describe "show page" do
       expect(page).to have_content("Admission Price: $45.00")
 
       within(".amusement_park_rides") do
-        expect(page).to have_content("Tower of Doom")
-        expect(page).to have_content("Brain Drain")
-        expect(page).to have_content("Tea Cups")
+        expect(page.all('li')[0]).to have_content("Brain Drain")
+        expect(page.all('li')[1]).to have_content("Tea Cups")
+        expect(page.all('li')[2]).to have_content("Tower of Doom")
       end
 
       expect(page).to have_content("Average Thrill Rating: 5.3/10")
